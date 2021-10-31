@@ -10,8 +10,8 @@ import consumer from "./consumer"
       received: function(data) {
         var users;
         users = (data['users'].map(function(i) {
-          return i['nickname'];
-        })).replace(/,/g, ' ');
+          return i['nickname'] + '';
+        })).toString().replace(/,/g, ' ');
         return $('#users').text(users);
       }
     });
