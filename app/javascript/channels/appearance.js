@@ -2,7 +2,7 @@ import consumer from "./consumer"
 
 (function() {
   jQuery(document).on('turbolinks:load', function() {
-    return App.room = App.cable.subscriptions.create({
+    App.room = App.cable.subscriptions.create({
       channel: "AppearanceChannel"
     }, {
       connected: function() {},
